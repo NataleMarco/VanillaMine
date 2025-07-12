@@ -1,3 +1,4 @@
+#entrypoint.sh
 #!/usr/bin/env bash
 set -e
 
@@ -10,14 +11,16 @@ sleep 5
 # Unir la red especificada
 zerotier-cli join d3ecf5726d55a665
 
-echo "Esperando configuración de ZeroTier..."
-# Espera a que ZeroTier reciba IP
-while ! zerotier-cli listnetworks | grep -q OK; do
+echo "Esperando conexión a la red ZeroTier..."
+
+NETWORK_NAME="loving_suess"
+while ! zerotier-cli listnetworks | grep -q "$NETWORK_NAME"; do
   sleep 1
 done
 
-echo "ZeroTier conectado. Redes:"
+echo "Conectado a la red ZeroTier '$NETWORK_NAME'"
 zerotier-cli listnetworks
+
 
 # Aceptar EULA y lanzar Minecraft
 echo "eula=true" > eula.txt
