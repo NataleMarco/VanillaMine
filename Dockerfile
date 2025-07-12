@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl \
 # Directorio de trabajo
 WORKDIR /opt/minecraft
 
-COPY server.jar server.jar
+COPY data/server.jar server.jar
 
 # Puerto expuesto de Minecraft
 EXPOSE 25565
