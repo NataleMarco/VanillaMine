@@ -1,4 +1,3 @@
-#Dockerfile
 FROM openjdk:21-jdk-slim
 
 # Instalación de curl y unzip (si necesitas descomprimir algo) y ZeroTier
