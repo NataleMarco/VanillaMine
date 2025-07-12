@@ -12,4 +12,4 @@ services:
       - /dev/net/tun:/dev/net/tun
     volumes:
       - ./data:/opt/minecraft
-    restart: unless-stopped
+    restart: always
