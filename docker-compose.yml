@@ -13,6 +13,3 @@ services:
     volumes:
       - ./data:/opt/minecraft
     restart: unless-stopped
-
-volumes:
-  mc_data:
