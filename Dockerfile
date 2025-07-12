@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 # Instalación de curl y unzip (si necesitas descomprimir algo) y ZeroTier
 RUN apt-get update && apt-get install -y curl \
