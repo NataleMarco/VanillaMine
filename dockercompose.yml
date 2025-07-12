@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  minecraft:
+    build: .
+    container_name: mc-1.27.7
+    ports:
+      - "25565:25565"
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    volumes:
+      - mc_data:/opt/minecraft
+    restart: unless-stopped
+
+volumes:
+  mc_data:
