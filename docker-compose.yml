@@ -11,7 +11,7 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     volumes:
-      - mc_data:/opt/minecraft
+      - ./data:/opt/minecraft
     restart: unless-stopped
 
 volumes:
